@@ -1,0 +1,30 @@
+--Create a shoe store inventory database
+
+CREATE TABLE shoe_store (id INTEGER PRIMARY KEY, name TEXT, brand TEXT, size INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO shoe_store VALUES
+(1,"Low Air Force 1","Nike",5,110,"White"),
+(2,"Blazer Mid '77","Nike",10,105,"White w/ black"),
+(3,"Air Max 90","Nike",8,130,"Gray"),
+(4,"Cortez","Nike",11.5,100,"White w/ red"),
+(5,"Air VaporMax 2021","Nike",12,210,"Black"),
+(6,"Yeezy 350","Adidas",9.5,220,"Grey w/ orange"),
+(7,"Ultra Boost","Adidas",10,190,"White"),
+(8,"Superstar","Adidas",7,100,"White w/ black"),
+(9,"Samba","Adidas",9,100,"Black"),
+(10,"Comme Des Garcons High Tops","Converse",10,150,"Cream"),
+(11,"Old Skool","Vans",8.5,75,"Black w/ white"),
+(12,"Jadon Boot Smooth Leather Platforms","Dr. Martens",10,210,"Black"),
+(13,"Air Jordan 1 Chicago","Jordan",10,180,"Red w/ black & white"),
+(14,"Space Jams 11","Jordan",12,220,"Black w/ purple"),
+(15,"Stan Smith","Adidas",9.5,105,"White w/ green");
+
+--Display the database ordered by price
+SELECT * FROM shoe_store ORDER BY price asc;
+
+--What shoe at the store has the highest price for a size 10?
+SELECT name,MAX(price) FROM shoe_store WHERE size = 10;
+
+
+
+
